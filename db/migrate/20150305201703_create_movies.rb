@@ -3,7 +3,7 @@ class CreateMovies < ActiveRecord::Migration
     create_table :movies do |t|
       t.string :title
       t.integer :total_gross
-      t.date :release_date
+      t.datetime :release_date
       t.integer :mpaa_rating
       t.string :description
     end
