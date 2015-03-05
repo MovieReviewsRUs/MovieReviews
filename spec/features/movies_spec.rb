@@ -1,7 +1,7 @@
 require 'pry-byebug'
 require 'rails_helper'
 
-describe 'Post Requests' do
+describe 'Movie Requests' do
   before(:all) do
     Movie.destroy_all
     movies = Movie.create([
@@ -17,7 +17,7 @@ describe 'Post Requests' do
       get '/movies'
       expect(response).to be_success
       json = JSON.parse(response.body)
-      expect(json.length).to eq 25
+      expect(json.length).to eq 3
     end
   end
 
