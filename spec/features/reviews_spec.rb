@@ -17,14 +17,14 @@ require 'rails_helper'
       { review: {
           author: "JSONWharff",
           comment: "Cras mattis consectetur purus sit amet fermentum. Maecenas faucibus mollis interdum. Nulla vitae elit libero, a pharetra augue. Donec ullamcorper nulla non metus auctor fringilla.",
-          star_rating: "5 stars"
+          star_rating: 5
         } }.to_json,
       { 'Accept' => Mime::JSON, 'Content-Type' => Mime::JSON.to_s }
       expect(response).to be_success
       expect(response.content_type).to be Mime::JSON
 
       post = JSON.parse(response.star_rating)
-      expect(post['star_rating']).to eq "5 stars"
+      expect(post['star_rating']).to eq 5
     end
   end
 
