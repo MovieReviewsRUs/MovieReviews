@@ -6,6 +6,7 @@ gem 'rack-cors'
 gem 'rails-api'
 gem 'spring', :group => :development
 gem 'pg'
+gem 'rack-cors'
 group :development do
   gem 'rspec-rails', '~> 3.0'
   gem 'capybara'
