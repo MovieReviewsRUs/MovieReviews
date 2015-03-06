@@ -3,7 +3,7 @@ class CreateReviews < ActiveRecord::Migration
     create_table :reviews do |t|
       t.string :author
       t.string :comment
-      t.string :star_rating
+      t.integer :star_rating
       t.belongs_to :movie, index: true
     end
     add_foreign_key :reviews, :movies

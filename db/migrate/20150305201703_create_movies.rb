@@ -4,7 +4,7 @@ class CreateMovies < ActiveRecord::Migration
       t.string :title
       t.integer :total_gross
       t.datetime :release_date
-      t.integer :mpaa_rating
+      t.string :mpaa_rating
       t.string :description
     end
   end
