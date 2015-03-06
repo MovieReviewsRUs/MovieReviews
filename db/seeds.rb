@@ -6,12 +6,12 @@ movies = Movie.create([
   {title: 'Gone Girl', total_gross: 167735396, release_date: DateTime.new(2014,10,03,9), mpaa_rating: 'r', description: 'rate this movie!'}
   ])
 
-movies[0] << Review.create([
+movies[0].reviews << Review.create([
     {author: "Brandon", comment: "pretty awesome", star_rating: 5}
-  ])}
-movies[1] << Review.create([
+  ])
+movies[1].reviews << Review.create([
     {author: "Pat", comment: "pretty funny", star_rating: 5}
-  ])}
-movies[2] << Review.create([
+  ])
+movies[2].reviews << Review.create([
     {author: "Helen", comment: "pretty intense", star_rating: 5}
-  ])}
+  ])
