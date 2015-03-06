@@ -15,3 +15,4 @@ movies[1].reviews << Review.create([
 movies[2].reviews << Review.create([
     {author: "Helen", comment: "pretty intense", star_rating: 5}
   ])
+
