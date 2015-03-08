@@ -14,4 +14,20 @@ class ReviewsController < ActionController::API
       render json: @review.errors, status: :unprocessable_entity
     end
   end
-end
+
+  def update
+    @review = Review.find(params[:id])
+
+    if @review.update(review_params)
+      head :no_content
+    else
+      render json: @review.errors, status: :unprocessable_entity
+    end
+  end
+
+  def destroy
+    @review = Review.find(params[:id])
+    @review.destroy
+
+    head :no_content
+  end
