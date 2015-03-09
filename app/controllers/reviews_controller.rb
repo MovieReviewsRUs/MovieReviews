@@ -31,3 +31,9 @@ class ReviewsController < ActionController::API
 
     head :no_content
   end
+
+  private
+  def review_params
+    params.require(:review).permit(:author, :comment, :star_rating)
+  end
+end
