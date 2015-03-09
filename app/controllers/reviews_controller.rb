@@ -6,7 +6,9 @@ class ReviewsController < ActionController::API
   end
 
   def create
+    @movie = Movie.find(params[:post_id])
     @review = Review.new(review_params)
+    @movie.reviews << @review
 
     if @review.save
       render json: @review, status: :created, location: @review
