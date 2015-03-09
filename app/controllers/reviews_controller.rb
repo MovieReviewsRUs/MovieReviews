@@ -6,7 +6,7 @@ class ReviewsController < ActionController::API
   end
 
   def create
-    @movie = Movie.find(params[:post_id])
+    @movie = Movie.find(params[:movie_id])
     @review = Review.new(review_params)
     @movie.reviews << @review
 
