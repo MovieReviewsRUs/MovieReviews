@@ -1,4 +1,5 @@
 class ReviewsController < ActionController::API
+  before_filter :authenticate, only: [:create]
   def index
     @reviews = Review.all
 
@@ -36,6 +37,6 @@ class ReviewsController < ActionController::API
 
   private
   def review_params
-    params.require(:review).permit(:author, :comment, :star_rating)
+    params.require(:review).permit(:author, :comment, :star_rating, :movie_id)
   end
 end

@@ -17,17 +17,17 @@ ActiveRecord::Schema.define(version: 20150309191210) do
   enable_extension "plpgsql"
 
   create_table "movies", force: :cascade do |t|
-    t.string  "title"
-    t.integer "total_gross"
-    t.date    "release_date"
-    t.integer "mpaa_rating"
-    t.string  "description"
+    t.string   "title"
+    t.integer  "total_gross"
+    t.datetime "release_date"
+    t.string   "mpaa_rating"
+    t.string   "description"
   end
 
   create_table "reviews", force: :cascade do |t|
     t.string  "author"
     t.string  "comment"
-    t.string  "star_rating"
+    t.integer "star_rating"
     t.integer "movie_id"
   end
 

@@ -7,6 +7,7 @@ gem 'rails-api'
 gem 'spring', :group => :development
 gem 'pg'
 gem 'rack-cors'
+gem 'bcrypt'
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers'
 group :development do
   gem 'rspec-rails', '~> 3.2.0'
